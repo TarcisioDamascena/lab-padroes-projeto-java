@@ -1,4 +1,4 @@
-package com.tarcisio.gof;
+package com.tarcisio.gof.singletons;
 
 /**
  * Singleton "preguiçoso".

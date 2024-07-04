@@ -1,10 +1,13 @@
-import com.tarcisio.gof.SingletonEager;
-import com.tarcisio.gof.SingletonLazy;
-import com.tarcisio.gof.SingletonLazyHolder;
+import com.tarcisio.gof.singletons.SingletonEager;
+import com.tarcisio.gof.singletons.SingletonLazy;
+import com.tarcisio.gof.singletons.SingletonLazyHolder;
+import com.tarcisio.gof.strategy.*;
 
 public class Main {
     public static void main(String[] args) {
+        // Teste relacionados ao Dessign Pattern
 
+        // Singleton
         SingletonLazy lazy = SingletonLazy.getInstancia();
         System.out.println(lazy);
         lazy = SingletonLazy.getInstancia();
@@ -19,6 +22,25 @@ public class Main {
         System.out.println(eager);
         eager = SingletonEager.getInstancia();
         System.out.println(eager);
+
+        //Strategy
+
+        Behavior defaultBh = new DefaultBehavior();
+        Behavior aggressiveBh = new AggressiveBehavior();
+        Behavior defensiveBh = new DefensiveBehavior();
+
+        Robot robot = new Robot();
+
+        robot.setBehavior(defaultBh);
+        robot.move();
+        robot.move();
+        robot.setBehavior(defensiveBh);
+        robot.move();
+        robot.move();
+        robot.setBehavior(aggressiveBh);
+        robot.move();
+        robot.move();
+
 
 
     }
