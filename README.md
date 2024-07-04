@@ -1,1 +1,2 @@
-* Repositório para pratica das aulas de Design Pattern da Trilha Java DIO
+# DIO - Trilha Java Básico
+### Repositório para estudos do curso: Design Patterns com Java
