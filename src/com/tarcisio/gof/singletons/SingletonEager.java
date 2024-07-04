@@ -7,13 +7,13 @@ package com.tarcisio.gof.singletons;
  */
 
 public class SingletonEager {
-    private static SingletonEager instancia = new SingletonEager();;
+    private static SingletonEager instancia = new SingletonEager();
 
     private SingletonEager() {
         super();
     }
 
-    public static SingletonEager getInstancia(){
-        return  instancia;
+    public static SingletonEager getInstancia() {
+        return instancia;
     }
 }

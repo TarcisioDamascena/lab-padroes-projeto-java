@@ -1,3 +1,4 @@
+import com.tarcisio.gof.facade.Facade;
 import com.tarcisio.gof.singletons.SingletonEager;
 import com.tarcisio.gof.singletons.SingletonLazy;
 import com.tarcisio.gof.singletons.SingletonLazyHolder;
@@ -23,6 +24,8 @@ public class Main {
         eager = SingletonEager.getInstancia();
         System.out.println(eager);
 
+        System.out.println("Fim do Singleton \n");
+
         //Strategy
 
         Behavior defaultBh = new DefaultBehavior();
@@ -40,8 +43,10 @@ public class Main {
         robot.setBehavior(aggressiveBh);
         robot.move();
         robot.move();
+        System.out.println("Fim do Strategy \n");
 
-
-
+        //Facade
+        Facade facade = new Facade();
+        facade.clientMigration("Tarcisio Damascena", "45000-222");
     }
 }
